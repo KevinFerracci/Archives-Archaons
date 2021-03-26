@@ -1,0 +1,9 @@
+@font-face {
+  font-family:"Asgalt";
+  src: url("/font/Asgalt-Regular.ttf") format("truetype");
+}
+
+p {
+  font-size: 40px; 
+  font-family: 'Asgalt';
+}
