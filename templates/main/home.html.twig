@@ -2,6 +2,18 @@
 
 {% block title %}{{ pageTitle }}{% endblock %}
 
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel ="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
 {% block container %}
-  <p> Hello Archaons</p>
+  <main>
+    <h1><em>ARCH</em>.NET</h1>
+    <img src="{{ asset('pictures/ArchNetLogo.png')}}" class="logo">
+    <h3> RECHERCHE </h3>
+    {{ form(search_form) }}
+  </main>
+                
+
 {% endblock %}

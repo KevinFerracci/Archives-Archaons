@@ -1,0 +1,36 @@
+main {
+  height : auto;
+  width: 60%;
+  margin: auto; 
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+h1 {
+  padding-top: 3%;
+  font-size: 90px;
+  font-weight: normal;
+  margin : auto; 
+}
+
+h3 {
+  font-size : 50px;
+  font-weight : normal; 
+}
+
+em {
+  color: purple;
+  font-style: normal;
+}
+
+.logo {
+  margin-top : -3%;
+  width: 70%;
+}
+
+#search {
+  width: 40%;
+  height: 3em;
+  border-color: #462D6A;
+}

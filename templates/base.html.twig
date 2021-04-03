@@ -6,7 +6,6 @@
   
         {% block stylesheets %}
 
-            <!-- Internal Stylesheet -->
              <link rel ="stylesheet" href="{{ asset('css/style.css') }}">
 
         {% endblock %}
@@ -17,11 +16,26 @@
     </head>
     <body>
         {% block body %}
+
+            {% block header %}  
+                <header>
+                    <img src="{{ asset('pictures/ArchNetLogo.png')}}" class="logo_menu"/>
+                    <h2>MENU</h2>
+                    <img src="{{ asset('pictures/Menu_unerline.png')}}" class="underline"/>
+                </header>
+            {% endblock %}
         
             {% block container %} {% endblock %}
 
             {% block footer %}
-            
+                <footer>
+                    <nav>
+                        <a href="/contact">Contact</a>
+                        <a href=""> <img src="{{ asset('pictures/logo_blanc.png')}}"/><strong>.ArchaStudio.fr.</strong></a>
+                        <a href="">Version</a>
+                    </nav>
+                </footer>
+                
             {% endblock %}
         
         {% endblock %}
