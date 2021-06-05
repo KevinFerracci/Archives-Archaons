@@ -15,29 +15,47 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}
-
+        
             {% block header %}  
                 <header>
-                    <img src="{{ asset('pictures/ArchNetLogo.png')}}" class="logo_menu"/>
-                    <h2>MENU</h2>
-                    <img src="{{ asset('pictures/Menu_unerline.png')}}" class="underline"/>
+                   <a href ="{{ path('home') }}"> <img src="{{ asset('pictures/ArchNetLogo.png')}}" class="logo_menu"/></a>
+                    <div class = "title">
+                        <h2>MENU</h2>
+                        <img src="{{ asset('pictures/Menu_unerline.png')}}" class="underline"/>
+                    </div>
                 </header>
+
+                <div class="menu">
+                    <div class = "ok"> <img src="{{ asset('pictures/MenuList_Bottom.png')}}" class = "bottom"/> </div>
+                    <div class = "ok2"> <img src="{{ asset('pictures/MenuList_Right.png')}}" class="right"/> </div>
+                    <div class = "ok3"> <img src="{{ asset('pictures/MenuList_Top.png')}}" class="top"/> </div>
+                    <ul>
+                        <li><a href="{{ path('packages') }}">PACKAGES</a></li>
+                        <hr>
+                        <li><a href="{{ path('design_patterns') }}">DESIGN PATTERNS</a></li>
+                        <hr>
+                        <li><a href="{{ path('modules') }}">MODULES</a></li>
+                        <hr>
+                        <li><a href="{{ path('extensions') }}">EXTENSIONS</a></li>
+                        <hr>
+                        <li><a href="{{ path('library') }}">LIBRARY</a></li>
+                        <hr>
+                        <li><a href="{{ path('services') }}">SERVICES</a></li>
+                        <hr>
+                    </ul>
+                </div>
+             
             {% endblock %}
         
             {% block container %} {% endblock %}
 
             {% block footer %}
                 <footer>
-                    <nav>
-                        <a href="/contact">Contact</a>
-                        <a href=""> <img src="{{ asset('pictures/logo_blanc.png')}}"/><strong>.ArchaStudio.fr.</strong></a>
-                        <a href="">Version</a>
-                    </nav>
+                    <a href="/contact">Contact</a>
+                    <a href=""> <img class="logo_footer" src="{{ asset('pictures/logo_blanc.png')}}"/><strong>.ArchaStudio.fr.</strong></a>
+                    <a href="">Version</a>   
                 </footer>
-                
-            {% endblock %}
+            {% endblock %}        
         
-        {% endblock %}
     </body>
 </html>

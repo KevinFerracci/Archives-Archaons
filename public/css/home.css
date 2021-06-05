@@ -1,6 +1,6 @@
 main {
   height : auto;
-  width: 60%;
+  width: 70em;
   margin: auto; 
   text-align: center;
   vertical-align: middle;
@@ -26,11 +26,13 @@ em {
 
 .logo {
   margin-top : -3%;
-  width: 70%;
+  width: 65%;
 }
 
 #search {
-  width: 40%;
+  width: 35%;
   height: 3em;
   border-color: #462D6A;
+  font-size: 19px;
 }
+

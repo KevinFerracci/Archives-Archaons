@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Extensions{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+{% endblock %}
+
+{% block container %}
+  <h1>Extensions</h1>
+  {% for extension in extensions %}
+    {{ extension.title }}
+    {{ extension.urlDownload }}
+    {{ extension.urlGit }}
+    {{ extension.description }}
+  {% endfor %}
+{% endblock %}

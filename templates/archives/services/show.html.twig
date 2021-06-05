@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+{% endblock %}
+
+{% block container %}
+  <h1>Services</h1>
+  {% for service in services %}
+    {{ service.title }}
+    {{ service.urlDownload }}
+    {{ service.urlGit }}
+    {{ service.description }}
+  {% endfor %}
+{% endblock %}

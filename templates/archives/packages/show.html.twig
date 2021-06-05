@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Packages{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel ="stylesheet" href="{{ asset('css/category.css') }}">
+{% endblock %}
+
+{% block container %}
+  <main>
+    <h1>PACKAGES</h1>
+    <div class = "category">
+      <h2> RECHERCHE </h3>
+      {{ form(search_form) }}
+      <hr size="3" color="#240b3b" class="dark">
+      {% for package in packages %}
+       <h3> {{ package.title }} </h3>
+       <hr size="3" color="#6f1c8b" class="purple">
+       <input type="button" value="download" class="download" onlick="window.location='{{ package.urlDownload }}';">
+       <a href="{{ package.urlGit}}" target="_blank"> <input type="button" value="git" class="github"> </a> 
+       
+       {{ package.description }}
+    </div>
+  </main>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ pageTitle }}{% endblock %}
+
+{% block body %}
+    <h1>Archives index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>UrlYoutube</th>
+                <th>UrlDownload</th>
+                <th>UrlGit</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Description</th>
+                <th>Utilisation</th>
+                <th>Installation</th>
+                <th>Website_description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for archive in archives %}
+            <tr>
+                <td>{{ archive.id }}</td>
+                <td>{{ archive.Type }}</td>
+                <td>{{ archive.urlYoutube }}</td>
+                <td>{{ archive.urlDownload }}</td>
+                <td>{{ archive.urlGit }}</td>
+                <td>{{ archive.title }}</td>
+                <td>{{ archive.content }}</td>
+                <td>{{ archive.description }}</td>
+                <td>{{ archive.utilisation }}</td>
+                <td>{{ archive.installation }}</td>
+                <td>{{ archive.websiteDescription }}</td>
+                <td>
+                    <a href="{{ path('archives_show', {'id': archive.id}) }}">show</a>
+                    <a href="{{ path('archives_edit', {'id': archive.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('archives_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Archives{% endblock %}
+
+{% block body %}
+    <h1>Archives</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ archive.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ archive.Type }}</td>
+            </tr>
+            <tr>
+                <th>UrlYoutube</th>
+                <td>{{ archive.urlYoutube }}</td>
+            </tr>
+            <tr>
+                <th>UrlDownload</th>
+                <td>{{ archive.urlDownload }}</td>
+            </tr>
+            <tr>
+                <th>UrlGit</th>
+                <td>{{ archive.urlGit }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ archive.title }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ archive.content }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ archive.description }}</td>
+            </tr>
+            <tr>
+                <th>Utilisation</th>
+                <td>{{ archive.utilisation }}</td>
+            </tr>
+            <tr>
+                <th>Installation</th>
+                <td>{{ archive.installation }}</td>
+            </tr>
+            <tr>
+                <th>Website_description</th>
+                <td>{{ archive.websiteDescription }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('archives_index') }}">back to list</a>
+
+    <a href="{{ path('archives_edit', {'id': archive.id}) }}">edit</a>
+
+    {{ include('archives/_delete_form.html.twig') }}
+{% endblock %}

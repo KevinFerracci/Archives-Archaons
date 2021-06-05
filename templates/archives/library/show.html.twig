@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Library{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+{% endblock %}
+
+{% block container %}
+  <h1>Library</h1>
+  {% for library in libraries %}
+    {{ library.title }}
+    {{ library.urlDownload }}
+    {{ library.urlGit }}
+    {{ library.description }}
+  {% endfor %}
+{% endblock %}

@@ -9,14 +9,9 @@
 }
 
 html {
-  height : 100vh;
+  min-height: 100%;
 }
 
-header {
-  position : absolute;
-  width: 11%;
-  height: 10%;
-}
 
 body {
   font-family: 'Asgalt';
@@ -24,56 +19,111 @@ body {
   text-align: center;
 }
 
-h2 {
-  font-size: 50px;
-  width: auto;
-  font-weight: normal; 
-  left : 0;
+header {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  display: flex; 
 }
 
-.logo_menu {
-  width: 100px;
-  float : left;
-  margin-left: none;
+.menu {
+  position: absolute;
+  margin-top : 8em;
+  height: 27em;
+  width: 14.5em;
+  background-color: #2F2F2E;
 }
 
-.underline {
-  padding-top : -50px;
-  width: 100px;
+.bottom {
+  position: absolute;
+  margin-top: 24.7em;
+  width: 23em;
+  left: -5em;
 }
 
-footer {
-  position : absolute;
-  text-align: center;
-  background-image: url("../pictures/footer.png");
-  background-size : contain;
-  height : 20%;
-  left: 0;
-  right : 0;
-  bottom : 0;
- }
-
- nav {
-   display : flex;
-   height: 100%;
-   align-items: center;
+ul {
+  margin-top: 2em;
 }
 
- nav a {
-  justify-content: space-between;
-  flex: auto;
-  font-size : 30px;
-  padding-top : 5%;
+.menu ul li {
+  font-size: 2.5em;
+  margin-top : 0.4em;
+  color: white ;
+}
+
+.menu a {
   color: white;
   text-decoration: none;
 }
 
-a img {
-  height: 50px;
+hr {
+  margin-left: 0.5em;
+}
+
+.top{
+  position: absolute;
+  margin-top: -1.5em;
+  margin-left: -12em;
+  width : 21.8em
+}
+
+.right { 
+  position: absolute; 
+  margin-top : 0.4em;
+  height: 27.8em;
+  margin-left: 6.5em;;
+}
+
+
+h2 {
+  font-size: 50px;
+  width: auto;
+  font-weight: normal; 
+  margin: 0;
+  margin-left: -0.6em;
+  margin-top: 0.5em;
+}
+
+.logo_menu {
+  height: 100px;
+  margin-left: -2em;
+}
+
+.underline {
+  margin-left: -4.7em;
+  margin-top : -1.8em;
+  width: 100px;
+  position: absolute;
+}
+
+footer {
+  position: absolute;
+  background-image: url("../pictures/footer.png");
+  background-size: contain;
+  height: 10em;
+  width: 100%;
+  bottom : 0;
+  display: flex;
+  align-items : center;
+ }
+
+ footer a {
+  justify-content: space-between;
+  flex: auto;
+  font-size: 1.875em;
+  padding-top: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+.logo_footer {
+  position: absolute;
+  margin-left: -2em;
+  height: 1.7em;
 }
 
 strong {
-  font-size : 50px;
+  font-size: 1.7em;
   text-decoration: none;
 }
 

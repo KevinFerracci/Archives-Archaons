@@ -19,6 +19,60 @@ class ArchivesRepository extends ServiceEntityRepository
         parent::__construct($registry, Archives::class);
     }
 
+    public function findPackages(){
+        $builder = $this->createQueryBuilder('archives');
+        $builder->where('archives.Type = ?1');
+        $builder->setParameter(1,'Packages');
+        $query = $builder->getQuery();
+
+        return $query->execute();
+    }
+
+    public function findDesingPatterns(){
+        $builder = $this->createQueryBuilder('archives');
+        $builder->where('archives.Type = ?1');
+        $builder->setParameter(1,'Desing Patterns');
+        $query = $builder->getQuery();
+
+        return $query->execute();
+    }
+
+    public function findModules(){
+        $builder = $this->createQueryBuilder('archives');
+        $builder->where('archives.Type = ?1');
+        $builder->setParameter(1,'Modules');
+        $query = $builder->getQuery();
+
+        return $query->execute();
+    }
+
+    public function findExtensions(){
+        $builder = $this->createQueryBuilder('archives');
+        $builder->where('archives.Type = ?1');
+        $builder->setParameter(1,'Extensions');
+        $query = $builder->getQuery();
+
+        return $query->execute();
+    }
+
+    public function findLibrary(){
+        $builder = $this->createQueryBuilder('archives');
+        $builder->where('archives.Type = ?1');
+        $builder->setParameter(1,'Library');
+        $query = $builder->getQuery();
+
+        return $query->execute();
+    }
+
+    public function findServices(){
+        $builder = $this->createQueryBuilder('archives');
+        $builder->where('archives.Type = ?1');
+        $builder->setParameter(1,'Services');
+        $query = $builder->getQuery();
+
+        return $query->execute();
+    }
+
     // /**
     //  * @return Archives[] Returns an array of Archives objects
     //  */

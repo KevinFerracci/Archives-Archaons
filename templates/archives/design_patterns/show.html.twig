@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Patterns Design {% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+{% endblock %}
+
+{% block container %}
+  <h1>Patterns Design</h1>
+  {% for design in designs %}
+    {{ design.title }}
+    {{ design.urlDownload }}
+    {{ design.urlGit }}
+    {{ design.description }}
+  {% endfor %}
+{% endblock %}
